@@ -11,6 +11,12 @@ public class BuckysWordsArray {
 				System.out.println(w + " starts with fu");
 			}
 		}
+		
+		//ends with
+		for (String w : words) {
+			if (w.endsWith("unk")) {
+				System.out.println(w + " ends with unk");
+			}
+		}
 	}
-
 }
