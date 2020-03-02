@@ -1,4 +1,5 @@
 package buckysWordsArray;
+import java.util.*;
 
 public class BuckysWordsArray {
 	public static void main(String args[]) {
@@ -47,9 +48,44 @@ public class BuckysWordsArray {
 		
 		// use those to change first or remaining letters for a form
 
-		// remove spaces
+		// remove spaces with trim()
 		System.out.println(a.trim() + b);
-
-
+		
+		// RECURSION method
+		System.out.println(fact(5));
+		
+		//COLLECTIONS - Dynamic (Arrays are not dynamic) - Different types like SET and LIST
+		String[] array1 = {"eggs", "lasers", "hats", "pie"};
+		List<String> list1 = new ArrayList<String>();
+		
+		//add array items to list
+		for (String x : array1) {
+			list1.add(x);
+		}
+		
+		String[] array2 = {"lasers", "hats"};
+		List<String> list2 = new ArrayList<String>();
+		
+		for (String y : array2) {
+			list2.add(y);
+		}
+		
+		for (int i = 0; i < list1.size() ; i++) {
+			System.out.printf("%s ", list1.get(i));
+		}
+		System.out.println();
+		for (int i = 0; i < list2.size() ; i++) {
+			System.out.printf("%s ", list2.get(i));
+		}
+	}
+	
+	// RECURSION (like factorial 5 * 4 * 3 * 2 * 1 = 120
+	// factorial method
+	public static long fact(long n) {
+		if (n <= 1) {
+			return 1;
+		} else {
+			return n * fact(n - 1);
+		}
 	}
 }
