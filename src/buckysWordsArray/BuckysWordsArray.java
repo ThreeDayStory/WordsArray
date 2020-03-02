@@ -27,8 +27,29 @@ public class BuckysWordsArray {
 		System.out.println(s.indexOf('k', 5));
 		// not found should give -1
 		System.out.println(s.indexOf('x'));
-
+		// gives starting point of sub group
+		System.out.println(s.indexOf("rob"));
+		// starting at a different point of search
+		System.out.println(s.indexOf("rob", 10));
 		
+		String a = "Bacon ";
+		String b = "monster";
+		// concatenation
+		System.out.println(a + b);
+		// another way to concatenate
+		System.out.println(a.concat(b));
+		
+		// replace first parameter is replaced with second parameter
+		System.out.println(a.replace('B', 'F'));
+		
+		// Uppercase
+		System.out.println(b.toUpperCase());
+		
+		// use those to change first or remaining letters for a form
+
+		// remove spaces
+		System.out.println(a.trim() + b);
+
 
 	}
 }
