@@ -69,13 +69,23 @@ public class BuckysWordsArray {
 		for (String y : array2) {
 			list2.add(y);
 		}
-		
+		System.out.println("List 1:");
+
 		for (int i = 0; i < list1.size() ; i++) {
 			System.out.printf("%s ", list1.get(i));
 		}
-		System.out.println();
+		
+		System.out.println("\nList 2:");
 		for (int i = 0; i < list2.size() ; i++) {
 			System.out.printf("%s ", list2.get(i));
+		}
+		
+		System.out.print("\nRevised List 1:");
+		
+		editList(list1, list2);
+		System.out.println();
+		for (int i = 0; i < list1.size() ; i++) {
+			System.out.printf("%s ", list1.get(i));
 		}
 	}
 	
@@ -86,6 +96,17 @@ public class BuckysWordsArray {
 			return 1;
 		} else {
 			return n * fact(n - 1);
+		}
+	}
+	
+	// removing items from list1 that are in both list1 and list2
+	public static void editList(Collection<String> l1, Collection<String> l2) {
+		Iterator<String> it = l1.iterator();
+		
+		while(it.hasNext()) {
+			if (l2.contains(it.next())) {
+				it.remove();
+			}
 		}
 	}
 }
